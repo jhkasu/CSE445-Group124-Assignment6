@@ -7,8 +7,8 @@ ASP.NET Web Application with Forms Security, integrating multiple WCF services.
 | Member | Files to implement |
 |--------|---------------------|
 | Juho Kim | Staff.aspx, Staff.aspx.cs, App_Data/Staff.xml, Default.aspx, Default.aspx.cs, HashLib/Hasher.cs, WebStrar deployment, Canvas submission |
-| [Member 2] | Login.aspx, Login.aspx.cs, Web.config (Forms Auth section) |
-| [Member 3] | Member.aspx, Member.aspx.cs, Controls/Captcha.ascx, Controls/Captcha.ascx.cs, App_Data/Member.xml |
+| Isaac Delph | Login.aspx, Login.aspx.cs, Web.config (Forms Auth section) |
+| Sebastian Jim| Member.aspx, Member.aspx.cs, Controls/Captcha.ascx, Controls/Captcha.ascx.cs, App_Data/Member.xml |
 
 ## Status
 
