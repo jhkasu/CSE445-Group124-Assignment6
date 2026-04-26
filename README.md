@@ -12,20 +12,17 @@ ASP.NET Web Application with Forms Security, integrating multiple WCF services.
 
 ## Project Structure
 
-CSE445Assignment6/
-├── A6WebApp/              ASP.NET Web Application
-│   ├── Default.aspx       Public landing page with Service Directory
-│   ├── Login.aspx         Forms authentication login page
-│   ├── Member.aspx        Member-only page (sign up + member features)
-│   ├── Staff.aspx         Staff-only page
-│   ├── Web.config         Forms Auth configuration
-│   ├── App_Data/
-│   │   ├── Member.xml     Stores hashed member credentials
-│   │   └── Staff.xml      Stores hashed staff credentials
-│   └── Controls/
-│       └── Captcha.ascx   Captcha User Control
-└── HashLib/               Class Library (DLL)
-└── Hasher.cs          SHA256 hashing functions
+- **A6WebApp/** - ASP.NET Web Application
+  - `Default.aspx` - Public landing page with Service Directory
+  - `Login.aspx` - Forms authentication login page
+  - `Member.aspx` - Member-only page (sign up + member features)
+  - `Staff.aspx` - Staff-only page
+  - `Web.config` - Forms Auth configuration
+  - `App_Data/Member.xml` - Stores hashed member credentials
+  - `App_Data/Staff.xml` - Stores hashed staff credentials
+  - `Controls/Captcha.ascx` - Captcha User Control
+- **HashLib/** - Class Library (DLL)
+  - `Hasher.cs` - SHA256 hashing functions
 
 ## HashLib API
 
@@ -50,16 +47,17 @@ bool isValid = Hasher.Verify("myPassword", storedHash);
 - Sign-up form: Username, Password, Email
 - Include Captcha User Control (`Controls/Captcha.ascx`)
 - Validate captcha before submission
-- Hash password before saving to Member.xml
-- Member.xml schema:
+- Hash password with `HashLib.Hasher.Hash()` before saving to Member.xml
+- Member.xml schema example:
+
 ```xml
-  <Users>
-    <User>
-      <Username>example</Username>
-      <PasswordHash>...</PasswordHash>
-      <Email>example@asu.edu</Email>
-    </User>
-  </Users>
+<Users>
+  <User>
+    <Username>example</Username>
+    <PasswordHash>...</PasswordHash>
+    <Email>example@asu.edu</Email>
+  </User>
+</Users>
 ```
 
 ## Deadlines
